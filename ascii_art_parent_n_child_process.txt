@@ -4,5 +4,5 @@ Parent Process (PID: P)                        Child Process (PID: C - new!)
 | Data Segment (copy)           |              | Data Segment (copy)           |
 | Stack (copy)                  |              | Stack (copy)                  |
 | Program Counter -> next instr |              | Program Counter -> next instr |
-| pid variable = C              |              | pid variable = 0              |
+| childpid variable = C         |              | pid variable = 0              |
 ---------------------------------              ---------------------------------
