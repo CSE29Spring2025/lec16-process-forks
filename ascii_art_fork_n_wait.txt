@@ -1,0 +1,16 @@
+Parent Process                       Child Process
+----------------                      -----------------
+pid = fork() --------creates------> (Child starts execution)
+  |
+  | (Parent continues)
+  |
+wait(&status) ---BLOCKS PARENT--->
+                                     (Child does its work...)
+                                     ...
+                                     exit(0) / return from main
+                                     (Child TERMINATES & becomes ZOMBIE briefly)
+                                     (OS signals Parent)
+  |
+<--UNBLOCKS PARENT, wait() returns--
+  |
+(Parent continues after child)

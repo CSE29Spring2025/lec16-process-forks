@@ -1,0 +1,11 @@
+      init (PID 1) / systemd (PID 1)
+           |
+    ---------------------
+    |                   |
+System Daemon       Login Shell (PID X)
+                        |
+                ------------------
+                |                |
+          my_program (PID Y)   another_cmd (PID Z)
+                |
+          child_of_my_program (PID A)

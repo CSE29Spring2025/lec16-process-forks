@@ -1,0 +1,7 @@
+Parent Process (PID: P)
+-----------------------
+| Code Segment        |
+| Data Segment (vars) |
+| Stack               |
+| Program Counter -> fork() call |
+-----------------------

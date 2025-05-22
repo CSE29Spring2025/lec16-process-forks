@@ -1,0 +1,21 @@
+User types "cmd args"
+        |
+        V
+Shell Process (Parent)
+        |
+    fork()
+    /   \
+   /     \
+  V       V
+Parent   Child Process
+  |         |
+wait()      |  execvp("cmd", args)
+  |         |    |
+  |         |    V
+  |         |  (Child becomes "cmd" process)
+  |         |  ("cmd" executes)
+  |         |  ("cmd" exits)
+  |         |
+  |<--Child terminates, wait() returns
+  |
+(Shell prompts for next command)
